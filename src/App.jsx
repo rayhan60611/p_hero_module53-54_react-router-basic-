@@ -1,9 +1,10 @@
 import "./App.css";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
     <div>
-      <h1 className="text-red-500">React Router Basic</h1>
+      <Navbar></Navbar>
     </div>
   );
 }
