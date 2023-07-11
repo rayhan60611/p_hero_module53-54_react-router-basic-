@@ -6,12 +6,12 @@ import { useState } from "react";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="flex flex-col md:flex-row gap-8 md:justify-center  bg-slate-600 p-2 text-white duration-500 md:items-start relative">
-      <div onClick={() => setOpen(!open)} className="md:hidden ">
+    <div className="flex flex-col md:flex-row gap-8 md:justify-center  bg-slate-600 p-2 text-white duration-500 md:items-start relative ">
+      <div onClick={() => setOpen(!open)} className="md:hidden z-10 ">
         {open ? (
-          <XMarkIcon className="h-8 w-8 font-bold text-white "></XMarkIcon>
+          <XMarkIcon className="h-8 w-8 font-bold text-white duration-700 animate-spin"></XMarkIcon>
         ) : (
-          <Bars3Icon className="h-8 w-8 font-bold text-white  "></Bars3Icon>
+          <Bars3Icon className="h-8 w-8 font-bold text-white  duration-700 hover:rotate-180"></Bars3Icon>
         )}
       </div>
 
