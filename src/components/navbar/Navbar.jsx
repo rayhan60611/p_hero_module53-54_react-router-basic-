@@ -2,6 +2,7 @@
 // import Styles from "./Navbar.module.css";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -11,7 +12,7 @@ const Navbar = () => {
         {open ? (
           <XMarkIcon className="h-8 w-8 font-bold text-white duration-700 animate-spin"></XMarkIcon>
         ) : (
-          <Bars3Icon className="h-8 w-8 font-bold text-white  duration-700 hover:rotate-180"></Bars3Icon>
+          <Bars3Icon className="h-8 w-8 font-bold text-white  duration-700 hover:rotate-"></Bars3Icon>
         )}
       </div>
 
@@ -20,31 +21,31 @@ const Navbar = () => {
           !open ? "-top-96 left-0 " : "top-12 left-0 "
         }`}
       >
-        <a
-          className="font-semibold text-2xl md:text-[16px] rounded hover:bg-slate-700  p-2 duration-700 hover:scale-105   text-center"
-          href="/"
+        <Link
+          className="font-semibold text-2xl md:text-[16px] rounded hover:bg-slate-700  p-2 duration-500 hover:scale-105 text-center"
+          to="/"
         >
           Home
-        </a>
-        <a
-          className="font-semibold text-2xl md:text-[16px] rounded hover:bg-slate-700  p-2 duration-700 hover:scale-105"
-          href="/service"
+        </Link>
+        <Link
+          className="font-semibold text-2xl md:text-[16px] rounded hover:bg-slate-700  p-2 duration-500 hover:scale-105"
+          to="/users"
         >
-          Service
-        </a>
-        <a
-          className="font-semibold text-2xl md:text-[16px] rounded hover:bg-slate-700  p-2 duration-700 hover:scale-105"
-          href="/contact-us"
+          Users
+        </Link>
+        <Link
+          className="font-semibold text-2xl md:text-[16px] rounded hover:bg-slate-700  p-2 duration-500 hover:scale-105"
+          to="/contact-us"
         >
           Contact Us
-        </a>
-        <a
-          className="font-semibold text-2xl md:text-[16px] rounded hover:bg-slate-700  p-2 duration-700 hover:scale-105"
-          href="/about-us"
+        </Link>
+        <Link
+          className="font-semibold text-2xl md:text-[16px] rounded hover:bg-slate-700  p-2 duration-500 hover:scale-105"
+          to="/about-us"
         >
           About Us
-        </a>
-        <button className="font-semibold text-2xl md:text-[16px] rounded hover:bg-slate-700  p-2 px-4 duration-700 hover:scale-105 border-white border-[1px]">
+        </Link>
+        <button className="font-semibold text-2xl md:text-[16px] rounded hover:bg-slate-700  p-2 px-4 duration-500 hover:scale-105 border-white border-[1px]">
           Try Now!
         </button>
       </nav>
