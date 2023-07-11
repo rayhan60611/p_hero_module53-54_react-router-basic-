@@ -14,6 +14,12 @@ const User = (props) => {
       >
         Show details...
       </Link>
+
+      <Link to={`/users/${user.id}`}>
+        <button className="font-semibold text-[16px] rounded text-white bg-green-600  p-3  duration-500  border-white border-[1px]">
+          Show details... btn
+        </button>
+      </Link>
     </div>
   );
 };
